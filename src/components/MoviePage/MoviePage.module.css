@@ -1,0 +1,78 @@
+.movies_card {
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+
+  padding: 20px 0 20px 0;
+}
+
+.movies_card_list {
+  width: 50%;
+}
+
+.movies_card_title {
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.movies_card_renting {
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.movies_card_overview {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.movies_card_genre {
+  color: rgb(214, 247, 50);
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.movies_cast,
+.movies_reviews {
+  color: white;
+  font-weight: 800;
+}
+
+.movies_detail {
+  margin-top: 30px;
+  display: flex;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.movies_information {
+  font-size: 30px;
+  color: #0f1416;
+  margin-top: 25px;
+  font-weight: 600;
+}
+
+.movies_back {
+  margin-top: 30px;
+  display: block;
+  color: #0f1416;
+  font-size: 25px;
+}
+
+.movies_card_favorite {
+  color:rgb(214, 247, 50);
+  border: transparent;
+  border-radius: 50%;
+  font-size: 30px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+}
