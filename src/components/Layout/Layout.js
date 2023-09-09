@@ -14,7 +14,7 @@ const Layout = () => {
               className={css.navigation_link}
               style={({ isActive }) => {
                 return {
-                  color: isActive ? 'tomato' : 'white',
+                  color: isActive ? 'yellow' : 'white',
                 };
               }}
             >
@@ -27,7 +27,7 @@ const Layout = () => {
               className={css.navigation_link}
               style={({ isActive }) => {
                 return {
-                  color: isActive ? 'tomato' : 'white',
+                  color: isActive ? 'yellow' : 'white',
                 };
               }}
             >

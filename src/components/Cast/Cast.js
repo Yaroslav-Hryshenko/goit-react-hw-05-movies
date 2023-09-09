@@ -27,23 +27,22 @@ const Cast = () => {
 
   return (
     <div className={css.cart}>
-      {cast.length === 0 && (
+      {cast.length === 0 ? (
         <p className={css.movies_cast_name}>
           We don't have any cast for this movie
         </p>
-      )}
-      <Swiper
-        spaceBetween={20}
-        slidesPerView={5}
-        cssMode={true}
-        navigation={true}
-        mousewheel={true}
-        keyboard={true}
-        modules={[Navigation, Mousewheel, Keyboard]}
-        className="mySwiper"
-      >
-        {cast.map(({ original_name, profile_path, id, character }) => {
-          return (
+      ) : (
+        <Swiper
+          spaceBetween={20}
+          slidesPerView={5}
+          cssMode={true}
+          navigation={true}
+          mousewheel={true}
+          keyboard={true}
+          modules={[Navigation, Mousewheel, Keyboard]}
+          className="mySwiper"
+        >
+          {cast.map(({ original_name, profile_path, id, character }) => (
             <SwiperSlide key={id} className={css.movies_cast_item}>
               <div className={css.wrap}>
                 <img
@@ -56,9 +55,9 @@ const Cast = () => {
                 <p className={css.movies_cast_name}>Character: {character}</p>
               </div>
             </SwiperSlide>
-          );
-        })}
-      </Swiper>
+          ))}
+        </Swiper>
+      )}
     </div>
   );
 };

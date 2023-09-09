@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getFilmsId } from '../../components/api';
-import MovieDetailsPage from 'components/MoviePage/MoviePage';
+import MovieDetailsPage from 'components/MovieDetailsPage/MovieDetailsPage';
 
 const MovieDetails = () => {
   const { moviesId } = useParams();
-  const [films, setFilms] = useState({});
+  const [film, setFilms] = useState({});
 
   useEffect(() => {
     if (!moviesId) return;
@@ -20,7 +20,7 @@ const MovieDetails = () => {
     }
   }, [moviesId]);
 
-  return <MovieDetailsPage films={films} moviesId={moviesId} />;
+  return <MovieDetailsPage films={film} moviesId={moviesId} />;
 };
 
 export default MovieDetails;
