@@ -15,25 +15,26 @@ const Movies = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const searchMovies = searchParams.get('query');
 
-  useEffect(() => {
-    if (!searchMovies) return;
-    try {
-      const fetchFilmSearch = async () => {
-        setLoader(true);
-        const searchMovie = await getFilmSearch(searchMovies);
-        setMovie(searchMovie.results);
-        if (searchMovie.results.length === 0) {
-          
-          return toast.error(`Oxxx, film not found ${searchMovies} `);
-        }
-      };
-      fetchFilmSearch();
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setLoader(false);
-    }
-  }, [searchMovies]);
+ useEffect(() => {
+   setLoader(true);
+   if (!searchMovies) return;
+   try {
+     const fetchFilmSearch = async () => {
+       const searchMovie = await getFilmSearch(searchMovies);
+       if (searchMovie.results.length === 0) {
+         toast.error(`Oxxx, film not found ${searchMovies}`);
+       } else {
+         setMovie(searchMovie.results);
+       }
+     };
+     fetchFilmSearch();
+   } catch (error) {
+     console.log(error);
+   } finally {
+     setLoader(false);
+   }
+ }, [searchMovies]);
+
 
   return (
     <>
